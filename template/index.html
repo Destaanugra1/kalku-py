@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasil Perhitungan</title>
+    <title>Kalkulator Pecahan</title>
 </head>
 <body>
-    <h1>Hasil Perhitungan</h1>
-    <p>{{ hasil }}</p>
-    <a href="/">Kembali</a>
+    <h1>Kalkulator Pecahan</h1>
+    <form action="/hitung" method="POST">
+        <input type="text" name="num1" placeholder="Bilangan pertama" required>
+        <select name="operasi">
+            <option value="tambah">+</option>
+            <option value="kurang">-</option>
+            <option value="kali">*</option>
+            <option value="bagi">/</option>
+        </select>
+        <input type="text" name="num2" placeholder="Bilangan kedua" required>
+        <button type="submit">Hitung</button>
+    </form>
 </body>
 </html>
-
